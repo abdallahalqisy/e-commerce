@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "842102753190",
+    "project_id": "learne-fire-base",
+    "storage_bucket": "learne-fire-base.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842102753190:android:3469bdd7b5c5135e643167",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvVw7IYtguEXkK8hayvauUc_ji64rb-Gw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842102753190:android:c55b5493b3b3f5b0643167",
+        "android_client_info": {
+          "package_name": "com.example.notification"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvVw7IYtguEXkK8hayvauUc_ji64rb-Gw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
