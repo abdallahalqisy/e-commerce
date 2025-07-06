@@ -5,6 +5,4 @@ part 'addres_state.dart';
 
 class AddresCubit extends Cubit<AddresState> {
   AddresCubit() : super(AddresInitial());
-
-  
 }
