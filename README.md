@@ -2,42 +2,61 @@
 
 A simple and complete Flutter-based e-commerce application.
 
-The app allows users to register and log in using a REST API, view and filter products by category, add items to favorites and cart, search through products, and receive real-time notifications via Firebase. It also includes a secure payment process powered by Stripe integration.
+This app allows users to register and log in using a REST API, browse and filter products by category, add items to the favorites and cart, perform real-time product searches, and receive push notifications using Firebase. It also integrates secure payment processing with Stripe.
 
-This project is ideal for learning how to build scalable mobile apps , state management, and third-party API integration.
+This project is ideal for learning how to build scalable mobile apps using state management and third-party API integration.
 
-📱 Features
-🔐 User Authentication — Login and register using REST API.
+---
 
-🛍️ Product Listing — Fetch and display products dynamically.
+## 📱 Features
 
-🧭 Category Filtering — Filter products by category or price.
+- 🔐 **User Authentication** — Login and register via REST API  
+- 🛍️ **Product Listing** — Dynamically fetch and display products  
+- 🧭 **Category Filtering** — Filter products by category or price  
+- ❤️ **Wishlist Management** — Add/remove items from favorites  
+- 🛒 **Shopping Cart** — Add/remove items with quantity management  
+- 🔍 **Search Functionality** — Real-time product search  
+- 🔔 **Push Notifications** — Integrated via Firebase Cloud Messaging  
+- 💳 **Stripe Payments** — Secure payment integration  
+- ⚙️ **State Management** — Implemented using BLoC/Cubit pattern  
+- 🌐 **API Integration** — Full backend communication  
 
-❤️ Wishlist Management — Add/remove items from favorites.
+---
 
-🛒 Shopping Cart — Add/remove items with quantity support.
+## 📸 Screenshots
 
-🔍 Search Functionality — Real-time product search.
+![image](https://github.com/user-attachments/assets/736f282a-6c2a-4b80-808b-bec84402f1c2)
 
-🔔 Push Notifications — Powered by Firebase Cloud Messaging.
+---
 
-💳 Stripe Payments — Integrated payment system using Stripe.
+## 🧰 Technologies Used
 
-⚙️ State Management — Clean architecture with BLoC/Cubit.
+- Flutter & Dart  
+- BLoC / Cubit for state management  
+- REST API integration  
+- Firebase Cloud Messaging  
+- Stripe payment gateway  
+- Shared Preferences for session storage  
+- Dio package for networking  
 
-🌐 API Integration — Fully connected to backend services.
+---
+
+## 🚀 Getting Started
+
+To run the app locally on your machine, follow these steps:
+
+### 📥 Clone the Repository
+
+```bash
+git clone https://github.com/abdallahalqisy/e-commerce.git
+cd e-commerce
+flutter pub get
+flutter run
 
 
+## 📬 Contact
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+For questions or contributions:  
+📧 alqisyabdallah@gmail.com  
+📱 WhatsApp: 01553212429  
+🌐 [Facebook](https://www.facebook.com/abdallah.alqisy.7)
