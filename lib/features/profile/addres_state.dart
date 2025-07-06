@@ -4,5 +4,3 @@ part of 'addres_cubit.dart';
 abstract class AddresState {}
 
 class AddresInitial extends AddresState {}
-
-

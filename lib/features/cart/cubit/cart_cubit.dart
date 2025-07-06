@@ -126,4 +126,39 @@ class CartCubit extends Cubit<CartState> {
       emit(CartDeleteError(message: 'حدث خطأ غير متوقع'));
     }
   }
+
+  // clear the cart items
+  Future<void> clearCart() async {
+    emit(CartLoading());
+    try {
+      final response = await dio.delete(
+        '$baseUrl/api/Cart/clear',
+        options: Options(
+          headers: {
+            'Authorization': 'Bearer $userToken',
+            'Content-Type': 'application/json',
+          },
+        ),
+      );
+
+      if (response.statusCode == 200 || response.statusCode == 204) {
+        log('✅ Cart cleared successfully');
+        _items.clear();
+        _totalPrice = 0.0;
+        emit(
+          CartLoadSuccess(
+            cartData: CartData(items: [], totalCartPrice: 0.0, id: ''),
+          ),
+        );
+      } else {
+        emit(
+          CartClearError(message: 'فشل في مسح السلة: ${response.statusCode}'),
+        );
+      }
+    } on DioException catch (e) {
+      emit(CartClearError(message: e.message ?? 'خطأ في الاتصال'));
+    } catch (e) {
+      emit(CartClearError(message: e.toString() ?? 'حدث خطأ غير متوقع'));
+    }
+  }
 }

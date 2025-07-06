@@ -1,8 +1,12 @@
+import 'package:ecommerce/core/util/stripe_servece.dart';
 import 'package:ecommerce/features/brand/brand_screen.dart';
 import 'package:ecommerce/features/brand/cubit/brand_cubit.dart';
 import 'package:ecommerce/features/cart/cart_screen.dart';
 import 'package:ecommerce/features/cart/cubit/cart_cubit.dart';
 import 'package:ecommerce/features/home/home_screen.dart';
+import 'package:ecommerce/features/payment/paymentcubit/payment_cubit.dart';
+import 'package:ecommerce/features/payment/repos/checkout_repo.dart';
+import 'package:ecommerce/features/payment/repos/checkout_repo_impl.dart';
 import 'package:ecommerce/features/profile/cubit/addres_cubit.dart';
 import 'package:ecommerce/features/profile/profile_screen.dart';
 import 'package:ecommerce/wishList/cubit/wishlist_cubit.dart';
@@ -33,7 +37,10 @@ class _MainLayoutState extends State<MainLayout> {
       // 🛒 صفحة السلة
       BlocProvider(
         create: (_) => CartCubit()..getCartItems(),
-        child: const CartScreen(),
+        child: BlocProvider(
+          create: (_) => PaymentCubit(CheckoutRepoImpl(StripeService())),
+          child: const CartScreen(),
+        ),
       ),
       BlocProvider(
         create: (context) => FavoriteCubit()..fetchFavorites(),

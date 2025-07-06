@@ -54,3 +54,9 @@ class CartDeleteError extends CartState {
 
   CartDeleteError({required this.message});
 }
+
+class CartClearError extends CartState {
+  final String message;
+
+  CartClearError({required this.message});
+}

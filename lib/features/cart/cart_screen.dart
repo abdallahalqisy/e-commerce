@@ -1,4 +1,9 @@
 // ✅ CartScreen النهائي متكامل مع CartCubit الجديد
+import 'package:ecommerce/core/util/stripe_servece.dart';
+import 'package:ecommerce/features/cart/widgets/button_checkout.dart';
+import 'package:ecommerce/features/payment/paymentcubit/payment_cubit.dart';
+import 'package:ecommerce/features/payment/paymentcubit/payment_state.dart';
+import 'package:ecommerce/features/payment/repos/checkout_repo_impl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ecommerce/features/cart/cubit/cart_cubit.dart';
@@ -201,20 +206,31 @@ class _CartScreenState extends State<CartScreen> {
                         top: Radius.circular(20),
                       ),
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    child: Column(
                       children: [
-                        const Text(
-                          '💰 المجموع:',
-                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              '💰 المجموع:',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ),
+                            ),
+                            Text(
+                              '$totalPrice EGP',
+                              style: const TextStyle(
+                                color: Colors.greenAccent,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
                         ),
-                        Text(
-                          '$totalPrice EGP',
-                          style: const TextStyle(
-                            color: Colors.greenAccent,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        const SizedBox(height: 16),
+                        CustomButtonCheckout(
+                          amount: totalPrice * 100 as double,
                         ),
                       ],
                     ),
