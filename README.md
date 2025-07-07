@@ -41,6 +41,9 @@ This project is ideal for learning how to build scalable mobile apps using state
 
 ---
 
+🔗 [Download APK](https://github.com/abdallahalqisy/e-commerce/releases/tag/v1.0.0)
+---
+
 ## 🚀 Getting Started
 
 To run the app locally on your machine, follow these steps:
