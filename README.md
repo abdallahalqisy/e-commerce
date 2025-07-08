@@ -56,9 +56,11 @@ cd e-commerce
 flutter pub get
 flutter run
 
+---
 
 ## 📬 Contact
 
+```bash
 For questions or contributions:  
 📧 alqisyabdallah@gmail.com  
 📱 WhatsApp: 01553212429  
