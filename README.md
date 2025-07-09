@@ -42,6 +42,9 @@ This project is ideal for learning how to build scalable mobile apps using state
 ---
 
 🔗 [Download APK](https://github.com/abdallahalqisy/e-commerce/releases/tag/v1.0.0)
+------
+
+🔗 [Download APK](https://github.com/abdallahalqisy/e-commerce/releases/tag/v1.0.1)
 ---
 
 ## 🚀 Getting Started
